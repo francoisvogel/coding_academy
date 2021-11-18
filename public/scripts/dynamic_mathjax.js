@@ -1,4 +1,3 @@
-
 function run() {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -17,3 +16,5 @@ function run() {
 }
 
 setInterval(run, 100);
+
+// taken from https://sites.math.rutgers.edu/courses/MathJax/docs/html/dynamic.html
