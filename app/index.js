@@ -26,6 +26,10 @@ app.get('/problemset', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/pages/problemset.html'));
 });
 
+app.get('/guide', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/pages/guide.html'));
+});
+
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////

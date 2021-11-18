@@ -1,0 +1,8 @@
+a {
+    color: blue;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: rgb(76, 76, 183);
+}
