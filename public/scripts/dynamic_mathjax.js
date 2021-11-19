@@ -1,4 +1,4 @@
-function run() {
+function update() {
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "http://cdn.mathjax.org/mathjax/latest/MathJax.js";
@@ -15,6 +15,11 @@ function run() {
     document.getElementsByTagName("head")[0].appendChild(script);
 }
 
-setInterval(run, 100);
+function run() {
+    // document.getElementsByTagName("head")[0].removeChild(document.getElementsByTagName("head")[0].lastChild); // be very careful with this line of code
+    update();
+}
+
+setTimeout(run, 1000);
 
 // taken from https://sites.math.rutgers.edu/courses/MathJax/docs/html/dynamic.html
