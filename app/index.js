@@ -12,6 +12,12 @@ const path = require('path');
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 
+app.use(express.urlencoded({
+    extended: true
+}));
+
+app.use(express.json());
+
 app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', (req, res) => {
@@ -28,6 +34,22 @@ app.get('/problemset', (req, res) => {
 
 app.get('/guide', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/pages/guide.html'));
+});
+
+app.get('/news', (req, res) => {
+    if (req.query.article == undefined) {
+        res.sendFile(path.join(__dirname, '../public/pages/news.html'));
+    }
+    else {
+        var article = req.query.article;
+        var location = path.join(__dirname, '../public/data/news/'+article+'.html');
+        if (fs.existsSync(location)) {
+            res.sendFile(path.join(__dirname, '../public/pages/error404.html'));
+        }
+        else {
+            
+        }
+    }
 });
 
 //////////////////////////////////////////////////

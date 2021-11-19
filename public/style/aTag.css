@@ -1,0 +1,9 @@
+a {
+    color: rgb(144, 144, 250);
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgb(34, 34, 182);
+}

@@ -1,0 +1,14 @@
+{
+    "news": [
+        {
+            "id": "A1",
+            "name": "Topological sort",
+            "topics": ["graphs", "dfs"]
+        },
+        {
+            "id": "A2",
+            "name": "Topological sort",
+            "topics": ["graphs", "dfs"]
+        }
+    ]
+}
