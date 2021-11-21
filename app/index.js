@@ -34,9 +34,10 @@ app.get('/problemset', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/pages/problemset.html'));
 });
 
-app.get('/guide', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/pages/guide.html'));
+app.get('/ide', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/pages/ide.html'));
 });
+
 
 app.get('/news', (req, res) => {
     if (req.query.article == undefined) {

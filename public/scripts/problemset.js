@@ -14,7 +14,7 @@ async function generatePart(data, name) {
 
 async function problemWrapper(data) {
     var problem = document.createElement('div');
-    problem.classList = "w-full rounded bg-indigo-600 my-10";
+    problem.classList = "w-full sm:w-4/5 lg:w-3/5 xl:w-1/2 rounded bg-indigo-600 my-10";
 
     var name = document.createElement('h1');
     name.classList = "text-lg sm:text-xl font-semibold";
