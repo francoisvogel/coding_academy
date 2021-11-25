@@ -2,23 +2,13 @@
     "news": [
         {
             "id": "A1",
-            "name": "Topological sort",
+            "name": "Website Online",
             "author": "Francois Vogel",
             "date_year": "2021",
             "date_month": "11",
-            "date_day": "19",
-            "read": "3",
-            "description": "A tutorial on the topological sort, or how to create an ordering of vertices in a DAG graph such that every edge is in the same direction"
-        },
-        {
-            "id": "A2",
-            "name": "Topological sort",
-            "author": "Francois Vogel",
-            "date_year": "2021",
-            "date_month": "11",
-            "date_day": "19",
-            "read": "3",
-            "description": "A tutorial on how to do this"
+            "date_day": "20",
+            "read": "1",
+            "description": "BSN Coding Academy's brand new website is officially released"
         }
     ]
 }
