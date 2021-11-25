@@ -1,3 +1,5 @@
-met neque hendrerit, sollicitudin ex ac, pellentesque massa. Vestibulum sapien nibh, auctor id aliquet quis, fringilla ut nibh. Pellentesque leo risus, interdum nec ligula a, congue ornare metus. Quisque luctus, libero a laoreet dapibus, diam velit sollicitudin tellus, id auctor nisl nulla at sem. Morbi in porta orci, ut dictum libero. Mauris accumsan lectus ac vehicula pellentesque. Vestibulum pulvinar vehicula vehicula. Curabitur at tortor sit amet libero molestie lacinia. Integer fermentum vestibulum urna. Nunc ac ipsum id dui fermentum elementum vitae et arcu. Aliquam erat volutpat.
-When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+Suppose we have a function t(x) for a node x such that it returns a topologically sorted list of all descendants of x (nodes that are reachable from x).
+<br>
+Let \(g[x]\) denote the adjacency list of node x.
+<br>
+Now we can safely assume that, for every node y in \(g[x]\), $$t(x) = {x}+t(y_0)+t(y_1)+...+t(y_n)$$where \(+\) denotes the concatenation.
