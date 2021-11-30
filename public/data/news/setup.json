@@ -1,7 +1,7 @@
 {
     "news": [
         {
-            "id": "A1",
+            "id": "website_release",
             "name": "Website Online",
             "author": "Francois Vogel",
             "date_year": "2021",
@@ -9,6 +9,16 @@
             "date_day": "20",
             "read": "1",
             "description": "BSN Coding Academy's brand new website is officially released"
+        },
+        {
+            "id": "schedule",
+            "name": "New Schedule",
+            "author": "Francois Vogel",
+            "date_year": "2021",
+            "date_month": "11",
+            "date_day": "30",
+            "read": "1",
+            "description": "Here is our updated schedule!"
         }
     ]
 }
