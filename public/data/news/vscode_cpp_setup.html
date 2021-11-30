@@ -1,0 +1,409 @@
+<style>
+    .title {
+        font-size: 40px;
+    }
+
+    .under {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .intro {
+        font-size: 17px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* p {
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    } */
+
+    .link {
+        font-size: 17px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.6s;
+        text-decoration: none;
+        color: black;
+        font-style: italic;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .link:hover {
+        background-color: black;
+        color: whitesmoke;
+    }
+
+    .code {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.6s;
+        padding: 10px;
+        padding-left: 20px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+        white-space: pre;
+        max-width: 90%;
+        margin: 20px;
+        width: 100%;
+        word-wrap: break-word;
+        overflow-x: scroll;
+    }
+
+    .image {
+        display: flex;
+        max-width: 40vw;
+        height: auto;
+        max-height: 500px;
+        border: 10px solid gainsboro;
+        margin: 20px;
+        border-radius: 3px;
+    }
+
+    code {
+        background-color: gainsboro;
+        padding: 3px;
+        border-radius: 3px;
+        margin: 3px;
+        font-size: 15px;
+    }
+
+    .proTip {
+        font-size: 15px;
+        margin: 3px;
+        padding: 3px;
+        border: 6px solid gainsboro;
+        border-radius: 5px;
+        animation: changeBorderColor 3s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        width: max-content;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    @keyframes changeBorderColor {
+        0% {
+            border-color: red;
+        }
+
+        50% {
+            border-color: green;
+        }
+
+        75% {
+            border-color: blueviolet;
+        }
+
+        100% {
+            border-color: rgb(248, 8, 196);
+        }
+    }
+</style>
+
+<div class="intro">I've been using C++ with Visual Studio Code for several years now. I know that you may experience
+    hard times installing and properly configuring their environment, so I decided to give you a detailed explanation
+    for the installation, specifically for Windows 10 users.</div>
+<div class="subtitle">Installing MinGW64</div>
+<p>MinGW64 is a compiler system that namely provides C, C++ and Fortran compiler.<br>First, you need to download a zip
+    file from GitHub, containing the compiler system:</p>
+<a href="https://github.com/GorvGoyl/MinGW64/releases" class="link">github.com/GorvGoyl/MinGW64/releases</a>
+<p>Note that you should download the following zipped folder:</p>
+<div class="code">MinGW64.zip</div>
+<p>Now, extract the contents of the folder to:</p>
+<div class="code">C:\</div>
+<p>(Just open the zipped folder in the File Explorer, and click on <code> Extract All...</code> ). Then you will be
+    prompted your selected extraction folder, which should be <code> C:\</code>.)</p>
+<p>Congratulations! You can now use g++ from the CMD. To check that it works, you can ask the installed version with the
+    following command:</p>
+<div class="code">C:\MinGW64\bin\g++.exe --version</div>
+<p>You should get something like:</p>
+<div class="code">g++.exe (x86_64-win32-seh-rev0, Built by MinGW-W64 project) 8.1.0
+    Copyright (C) 2018 Free Software Foundation, Inc.
+    This is free software; see the source for copying conditions. There is NO
+    warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</div>
+<div class="subtitle">Adding g++ to the environment variables</div>
+<p>Now, to avoid having to type <code> C:\MinGW64\bin\g++.exe</code> every time you want to compile C++ code, you have
+    to modify your system environment variables.</p>
+<p>To do this, type "edit the system environment variables" in the Windows search bar.<br>Normally, a little window like
+    the one below should show up.</p>
+<img src="./data/news/images/systemPropertiesAdvanced.PNG" alt="System Properties in Windows 10" class="image">
+<p>Now, click on "Environment variables".<br>Under system variables, select <code> Path</code> and click on
+    <code> Edit...</code> .
+</p>
+<img src="./data/news/images/systemEnvironmentVariables.PNG" alt="Path variable" class="image">
+<p>Now, click on "New".</p>
+<img src="./data/news/images/pathVariableEdit.PNG" alt="Editing the path variable" class="image">
+<p>In the newly created field enter:</p>
+<div class="code">C:\MinGW64\bin\</div>
+<p>Great! You should now be able to use the g++ command from the CMD. To be sure that it works, type:</p>
+<div class="code">g++ --version</div>
+<p>You should receive the same message as with the previous command.</p>
+<div class="subtitle">Installing and downloading the proper extension for VS Code</div>
+<p>Install VS Code from the official Microsoft website if you still haven't done it.</p>
+<p>In VS Code, open the extensions tab (<code>Ctrl+Shift+X</code> by default).</p>
+<p>Now you need to install an extension that will allow to use C++. It's simply called C/C++.</p>
+<div class="proTip">PROTIP: I recommend you install the C/C++ Extensions Pack, which regroups several popular extensions
+</div>
+<p>You can check it out at the following link:</p>
+<a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack"
+    class="link">https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack</a>
+<div class="subtitle">Configuring VS Code</div>
+<p>Open a folder in VS Code (typically <code> Ctrl+O</code>). Create a folder called <code> .vscode</code> It will be
+    used for configuration.</p>
+<img src="./data/news/images/vsCodeConfigurationFolder.PNG" alt="A folder with a .vscode file opened in VS Code"
+    class="image">
+<p>You have to create a file to create debugging options called <code> launch.json</code> :</p>
+<div class="code">
+    {
+    "version": "0.2.0",
+    "configurations": [
+    {
+    "name": "BUILD & DEBUG",
+    "type": "cppdbg",
+    "request": "launch",
+    "program":
+    "${fileDirname}\\${fileBasenameNoExtension}.exe",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "environment": [],
+    "externalConsole": true,
+    // SET TO FALSE IF YOU WANT INTERNAL OUTPUT
+    "MIMode": "gdb",
+    "miDebuggerPath": "C:\\MinGW64\\bin\\gdb.exe",
+    "setupCommands": [
+    {
+    "description": "Enable pretty-printing for gdb",
+    "text": "-enable-pretty-printing",
+    "ignoreFailures": true
+    }
+    ],
+    "preLaunchTask": "g++.exe build active file"
+    },
+    {
+    "name": "BUILD & RUN",
+    "type": "cppdbg",
+    "request": "launch",
+    "program":
+    "${fileDirname}\\${fileBasenameNoExtension}.exe",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "environment": [],
+    "externalConsole": true,
+    // SET TO FALSE IF YOU WANT INTERNAL OUTPUT
+    "MIMode": "gdb",
+    "miDebuggerPath": "C:\\MinGW64\\bin\\gdb.exe",
+    "setupCommands": [
+    {
+    "description": "Enable pretty-printing for gdb",
+    "text": "-enable-pretty-printing",
+    "ignoreFailures": true
+    }
+    ],
+    "preLaunchTask": "g++ build & run active file"
+    }
+    ]
+    }
+</div>
+<p>You also need to create a file to reference the tasks described in the <code> launch.json</code> file, called
+    <code> tasks.json</code>:
+</p>
+<div class="code">
+    {
+    "tasks": [
+    {
+    "type": "shell",
+    "label": "g++.exe build active file",
+    "command": "C:\\MinGW64\\bin\\g++.exe",
+    "args": [
+    "-g",
+    "${file}",
+    "-o",
+    "${fileDirname}\\${fileBasenameNoExtension}.exe"
+    ],
+    "options": {
+    "cwd": "C:\\MinGW64\\bin"
+    }
+    },
+    {
+    "type": "shell",
+    "label": "g++ build & run active file",
+    "command": "C:\\MinGW64\\bin\\g++.exe",
+    "args": [
+    "${file}",
+    "-o",
+    "${fileDirname}\\${fileBasenameNoExtension}.exe"
+    ],
+    "options": {
+    "cwd": "C:\\MinGW64\\bin"
+    }
+    }
+    ],
+    "version": "2.0.0"
+    }
+</div>
+<p>As mentioned in the following article, if you want (or not) to see the output in the external console, modify the
+    value of <code> externalConsole</code>.</p>
+<a href="gourav.io/blog/setup-vscode-to-run-debug-c-cpp-code"
+    class="link">https://gourav.io/blog/setup-vscode-to-run-debug-c-cpp-code</a>
+<p>I also have a <code> settings.json</code> file, which is useful to store file associations:</p>
+<div class="code">
+    {
+    "files.associations": {
+    "*.json": "c",
+    "iostream": "cpp",
+    "vector": "cpp",
+    "ostream": "cpp",
+    "random": "cpp",
+    "*.tcc": "cpp",
+    "fstream": "cpp",
+    "deque": "cpp",
+    "list": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "iosfwd": "cpp",
+    "map": "cpp",
+    "new": "cpp",
+    "array": "cpp",
+    "atomic": "cpp",
+    "bitset": "cpp",
+    "cctype": "cpp",
+    "cfenv": "cpp",
+    "chrono": "cpp",
+    "cinttypes": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "codecvt": "cpp",
+    "complex": "cpp",
+    "condition_variable": "cpp",
+    "csetjmp": "cpp",
+    "csignal": "cpp",
+    "cstdarg": "cpp",
+    "cstddef": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "cuchar": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "forward_list": "cpp",
+    "unordered_set": "cpp",
+    "exception": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "memory": "cpp",
+    "memory_resource": "cpp",
+    "numeric": "cpp",
+    "ratio": "cpp",
+    "regex": "cpp",
+    "set": "cpp",
+    "string_view": "cpp",
+    "system_error": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "future": "cpp",
+    "initializer_list": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "mutex": "cpp",
+    "scoped_allocator": "cpp",
+    "shared_mutex": "cpp",
+    "sstream": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "thread": "cpp",
+    "typeindex": "cpp",
+    "typeinfo": "cpp",
+    "valarray": "cpp",
+    "optional": "cpp",
+    "charconv": "cpp",
+    "queue": "cpp",
+    "cassert": "cpp",
+    "cerrno": "cpp",
+    "cfloat": "cpp",
+    "ciso646": "cpp",
+    "climits": "cpp",
+    "stack": "cpp",
+    "ccomplex": "cpp",
+    "cstdalign": "cpp",
+    "cstdbool": "cpp",
+    "ctgmath": "cpp",
+    "filesystem": "cpp",
+    "ios": "cpp",
+    "locale": "cpp"
+    },
+    "C_Cpp.default.includePath": [
+    "C:/MinGW64/**"
+    ],
+    "C_Cpp.default.intelliSenseMode": "clang-x86",
+    "cmake.configureOnOpen": true
+    }
+</div>
+<p>Finally, the <code> c_cpp_properties.json</code> file is necessary. It allows you to specify the
+    <code> includePath</code> which is used to determine where the linter "crawls" when it detects
+    <code> #include</code> statements. Here's my code:
+</p>
+<div class="code">
+    {
+    "configurations": [
+    {
+    "name": "Win32",
+    "includePath": [
+    "${workspaceFolder}/**",
+    "C:\\MinGW64\\**"
+    ],
+    "defines": [
+    "_DEBUG",
+    "UNICODE",
+    "_UNICODE"
+    ],
+    "windowsSdkVersion": "10.0.18362.0",
+    "compilerPath":
+    "C:\\MinGW64\\bin\\g++.exe",
+    "cStandard": "c11",
+    "cppStandard": "c++17",
+    "intelliSenseMode": "gcc-x86"
+    }
+    ],
+    "version": 4
+    }
+</div>
+<div class="proTip">PROTIP: Use the <code>cppStandard</code> setting to change your C++ standard (here it's set to
+    c++17)</div>
+<p>If you want to know more about C++ history, I recommend you go check out the following article from GeeksforGeeks:
+</p>
+<a href="https://www.geeksforgeeks.org/history-of-c/" class="link">www.geeksforgeeks.org/history-of-c/</a>
+<div class="subtitle">Debugging</div>
+<p>When you go in the debugging tab (usually <code>Ctrl+Shift+D</code>), you should now have two options:</p>
+<img src="./data/news/images/debuggingOptions.PNG" alt="Debugging options" class="image">
+<p>If you just want to run the the current file, select <code>BUILD & RUN</code>.</p>
+<p>If you need to debug, select <code>BUILD & DEBUG</code>.</p>
+<div class="subtitle">Using C++ with VS Code on a daily basis</div>
+<p>If you notice there are any problems or you have suggestions, don't hesitate to contact me in the
+    <code>Contact</code> tab.
+</p>
+<p>I hope this tutorial was useful and helped you boost your productivity!</p>
+
+<!-- taken from https://francoisvogel.github.io/vsCodeCPP.html -->

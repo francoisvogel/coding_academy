@@ -17,8 +17,18 @@
             "date_year": "2021",
             "date_month": "11",
             "date_day": "30",
-            "read": "1",
+            "read": "2",
             "description": "Here is our updated schedule!"
+        },
+        {
+            "id": "vscode_cpp_setup",
+            "name": "Using C++ with VS Code: Installation & Tips",
+            "author": "Francois Vogel",
+            "date_year": "2021",
+            "date_month": "11",
+            "date_day": "30",
+            "read": "15",
+            "description": "I've been using C++ with Visual Studio Code for several years now. I know that you may experience hard times installing and properly configuring their environment, so I decided to give you a detailed explanation for the installation, specifically for Windows 10 users."
         }
     ]
 }
