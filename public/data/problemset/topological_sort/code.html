@@ -1,0 +1,15 @@
+<div style="white-space: pre-wrap;">void dfs(int x) {
+    vis[x] = 1;
+    for (int y : graph[x]) {
+        if (vis[y] == 0) {
+            dfs(y);
+        }
+        else if (vis[y] == 1) {
+            // cycle found
+            cout << "cycle found";
+            exit(0);
+        }
+    }
+    vis[x] = 2;
+}
+</div>

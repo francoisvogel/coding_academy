@@ -1,9 +1,15 @@
 {
     "problemset": [
         {
-            "id": "A1",
+            "id": "topological_sort",
             "name": "Topological sort",
             "difficulty": "500",
+            "topics": ["graphs", "dfs"]
+        },
+        {
+            "id": "cycle_detection",
+            "name": "Cycle detection in a directed graph",
+            "difficulty": "300",
             "topics": ["graphs", "dfs"]
         }
     ]
