@@ -1,0 +1,19 @@
+<b>Problem D - Weight Assignment For Tree Edges</b>
+^br^
+<i>Short statement:</i> Assign strictly positive edge weights to a tree such that when sorting nodes by they distances to the root, you obtain the given permutation P (of course no nodes can be at the same distance); or determine that it is impossible.
+^br^
+<i>Constraints:</i> \(N <= 200000\)
+^br^
+<i>Hint:</i> Think about a greedy approach: if all the ancestors of a node haven't appeared before it in the permutation the permutation is invalid.
+^br^
+<i>Solution:</i> Let's process vertices greedily. Suppose we are currently on node \(p[i]\) in the permutation. If \(parent[p[i]]\) hasen't already been visited, there is no solution. Otherwise assign \(dist[p[i]] = i\). Now the weight of an edge from \(x\) to \(p[x]\) can be easily determined by \(dist[x]-dist[p[x]]\). Since \(dist[x] > dist[p[x]]\) the edge weights are always positive.
+^br^
+<a href="https://codeforces.com/problemset/submission/1611/137870847">Link to solution code</a>
+^br^
+<b>Problem F - ATM and Students</b>
+^br^
+<a href="https://codeforces.com/contest/1611/submission/137545182">Link to solution code</a>
+^br^
+<b>Problem G - Robot and Candies</b>
+^br^
+<a href="https://codeforces.com/contest/1611/submission/137551281">Link to solution code</a>

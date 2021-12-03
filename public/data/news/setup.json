@@ -29,6 +29,16 @@
             "date_day": "30",
             "read": "15",
             "description": "I've been using C++ with Visual Studio Code for several years now. I know that you may experience hard times installing and properly configuring their environment, so I decided to give you a detailed explanation for the installation, specifically for Windows 10 users."
+        },
+        {
+            "id": "cf_756",
+            "name": "Codeforces Round #756 (Div. 3) Post Contest Analysis",
+            "author": "Francois Vogel",
+            "date_year": "2021",
+            "date_month": "12",
+            "date_day": "3",
+            "read": "12",
+            "description": "An in-depth analysis of the last Div. 3 Codeforces Contest"
         }
     ]
 }
