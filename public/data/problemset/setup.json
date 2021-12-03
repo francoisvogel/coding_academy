@@ -11,6 +11,12 @@
             "name": "Cycle detection in a directed graph",
             "difficulty": "300",
             "topics": ["graphs", "dfs"]
+        },
+        {
+            "id": "max_edges_dag",
+            "name": "Maximum number of edges that can be added in a DAG",
+            "difficulty": "300",
+            "topics": ["graphs", "dfs"]
         }
     ]
 }
