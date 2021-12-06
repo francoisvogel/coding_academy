@@ -3,3 +3,5 @@ Suppose we have a function t(x) for a node x such that it returns a topologicall
 Let \(g[x]\) denote the adjacency list of node x.
 <br>
 Now we can safely assume that, for every node y in \(g[x]\), $$t(x) = {x}+t(y_0)+t(y_1)+...+t(y_n)$$where \(+\) denotes the concatenation.
+<br>
+So we can basically just do a DFS and when exiting a node we push it to a stack. Then when we pop the nodes we get the topological sort.

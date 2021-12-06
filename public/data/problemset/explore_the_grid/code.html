@@ -1,0 +1,9 @@
+<div style="white-space: pre-wrap;">regionSize = 0
+
+def dfs(int x):
+    vis[x] = true
+    regionSize += 1
+    for (int y : graph[x]):
+        if (vis[y] == false):
+            dfs(y);
+</div>

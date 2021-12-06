@@ -17,6 +17,12 @@
             "name": "Maximum number of edges that can be added in a DAG",
             "difficulty": "300",
             "topics": ["graphs", "dfs"]
+        },
+        {
+            "id": "explore_the_grid",
+            "name": "Explore the grid",
+            "difficulty": "400",
+            "topics": ["graphs", "dfs"]
         }
     ]
 }
