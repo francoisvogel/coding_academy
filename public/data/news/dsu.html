@@ -1,0 +1,64 @@
+// slow DSU
+
+const int n = 1000;
+
+int parent [n];
+
+int getRoot(int x) {
+    if (parent[x] == x) return x;
+    else {
+        int root = getRoot(parent[x]);
+        parent[x] = root; // path compression
+        return root;
+        // same thing as
+        // return parent[x] = getRoot(parent[x]);
+    }
+}
+
+void merge(int x, int y) {
+    x = getRoot(x);
+    y = getRoot(y);
+    if (x == y) return;
+    parent[x] = y;
+}
+
+// fast dsu
+
+const int n = 1000;
+
+int parent [n];
+int height [n];
+
+int getRoot(int x) { // same as in slow DSU, just make sure not to forget path compression
+    if (parent[x] == x) return x;
+    else {
+        int root = getRoot(parent[x]);
+        parent[x] = root; // path compression
+        return root;
+        // same thing as
+        // return parent[x] = getRoot(parent[x]);
+    }
+}
+
+void merge(int x, int y) {
+    x = getRoot(x);
+    y = getRoot(y);
+    if (x == y) return;
+    if (height[x] > height[y]) {
+        parent[y] = x;
+    }
+    else if (height[x] < height[y]) {
+        parent[x] = y;
+    }
+    else { // same heights
+        // it doesnt matter whether we set x the parent of y or y the parent of x
+        parent[x] = y;
+        height[y]++;
+        // we could have also done:
+        // parent[y] = x;
+        // height[x] += 1;
+    }
+}
+
+// PROBLEM TO CODE USING DSU
+// https://codeforces.com/problemset/problem/1263/D

@@ -39,6 +39,16 @@
             "date_day": "3",
             "read": "12",
             "description": "An in-depth analysis of the last Div. 3 Codeforces Contest"
+        },
+        {
+            "id": "dsu",
+            "name": "An explanation on Disjoint Set Union",
+            "author": "Francois Vogel",
+            "date_year": "2021",
+            "date_month": "12",
+            "date_day": "16",
+            "read": "10",
+            "description": "Here's a code for DSU"
         }
     ]
 }
