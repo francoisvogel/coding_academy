@@ -49,6 +49,16 @@
             "date_day": "16",
             "read": "10",
             "description": "Here's a code for DSU"
+        },
+        {
+            "id": "happy_christmas_2021",
+            "name": "Merry Christmas",
+            "author": "Francois Vogel",
+            "date_year": "2021",
+            "date_month": "12",
+            "date_day": "17",
+            "read": "2",
+            "description": "Merry Christmas!"
         }
     ]
 }
