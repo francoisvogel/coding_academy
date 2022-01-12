@@ -1,7 +1,7 @@
 function update() {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "http://cdn.mathjax.org/mathjax/latest/MathJax.js";
+    script.src = "https://cdn.mathjax.org/mathjax/latest/MathJax.js";
 
     var config = 'MathJax.Hub.Config({' +
         'extensions: ["tex2jax.js"],' +
