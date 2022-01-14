@@ -59,6 +59,16 @@
             "date_day": "17",
             "read": "2",
             "description": "Merry Christmas!"
+        },
+        {
+            "id": "binary_and_ternary_search",
+            "name": "Binary and Ternary Search - Tutorial",
+            "author": "Francois Vogel",
+            "date_year": "2022",
+            "date_month": "01",
+            "date_day": "15",
+            "read": "5",
+            "description": "The perfect explanation for understanding these two types of searches"
         }
     ]
 }
