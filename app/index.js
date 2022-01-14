@@ -78,8 +78,9 @@ app.get('/news', (req, res) => {
             compiled = compiled.split('^date_day^').join(relevantData.date_day);
             compiled = compiled.split('^read^').join(relevantData.read);
             compiled = compiled.split('^content^').join(content);
-            fs.writeFileSync(path.join(__dirname, 'dump.html'), compiled);
-            res.sendFile(path.join(__dirname, 'dump.html'));
+            // fs.writeFileSync(path.join(__dirname, 'dump.html'), compiled);
+            // res.sendFile(path.join(__dirname, 'dump.html'));
+            res.send(compiled);
         }
     }
 });
