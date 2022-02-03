@@ -69,6 +69,16 @@
             "date_day": "15",
             "read": "5",
             "description": "The perfect explanation for understanding these two types of searches"
+        },
+        {
+            "id": "segtree",
+            "name": "Segment Tree - Sample Implementation",
+            "author": "Francois Vogel",
+            "date_year": "2022",
+            "date_month": "02",
+            "date_day": "03",
+            "read": "5",
+            "description": "A code for Point Update & Range Query"
         }
     ]
 }
