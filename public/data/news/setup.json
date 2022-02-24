@@ -79,6 +79,16 @@
             "date_day": "03",
             "read": "5",
             "description": "A code for Point Update & Range Query"
+        },
+        {
+            "id": "holidays",
+            "name": "Remain calm and hash your strings",
+            "author": "Francois Vogel",
+            "date_year": "2022",
+            "date_month": "02",
+            "date_day": "24",
+            "read": "1",
+            "description": "Last session before the holidays..."
         }
     ]
 }
